@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { useEffect, useState } from 'react'
 
 export default function BlogList() {
@@ -32,7 +33,9 @@ export default function BlogList() {
                 <ul>
                     {blogListData.results ? blogListData.results.map(blog => (
                         <li key={blog.id}>
+                            <Link to={`/posts/${data.id}`}>
                             <img src={blog.image} alt="" />
+                            </Link>
                             <div>
                                 <h3>{blog.title}</h3>
                                 <p>{blog.content}</p>
