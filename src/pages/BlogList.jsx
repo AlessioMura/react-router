@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export default function BlogList() {
-    const [blogListData, setBlogListData] = useState({})
+    const [blogListData, setBlogListData] = useState([])
 
     function handleClick(e) {
         fetchData()
@@ -27,6 +27,7 @@ export default function BlogList() {
                     <h3>Click here to show all blogs</h3>
                     <button type='button' onClick={handleClick}>Here!</button>
                 </div>
+
 
                 <ul>
                     {blogListData.results ? blogListData.results.map(blog => (

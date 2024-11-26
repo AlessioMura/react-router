@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Form from './pages/Form'
 import About from './pages/About'
 import BlogList from './pages/BlogList'
+import BlogPage from './pages/BlogPage.jsx'
 import './App.css'
 import DefaultLayout from './pages/DefaultLayout'
 
@@ -19,6 +20,7 @@ function App() {
             <Route path='/form' element={<Form />} />
             <Route path='/about' element={<About />} />
             <Route path='/bloglist' element={<BlogList />} />
+            <Route path='/:id' element={<BlogPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
